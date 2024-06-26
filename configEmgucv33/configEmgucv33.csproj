@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9BB1DB1-0C5B-4333-B309-6D316C2FA58F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>configEmgucv33</RootNamespace>
+    <AssemblyName>configEmgucv33</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\..\..\EMGUOpenCV\Emgu3.3\Emgu3.3Install\emgucv-windesktop 3.3.0.2824\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>..\..\..\EMGUOpenCV\Emgu3.3\Emgu3.3Install\emgucv-windesktop 3.3.0.2824\bin\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Wpf">
+      <HintPath>..\..\..\EMGUOpenCV\EmguZip\libs\Emgu.CV.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmguConvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmguConvert.Designer.cs">
+      <DependentUpon>EmguConvert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEdgeDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdgeDetection.Designer.cs">
+      <DependentUpon>frmEdgeDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFullThreshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFullThreshold.Designer.cs">
+      <DependentUpon>frmFullThreshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistogram.Designer.cs">
+      <DependentUpon>frmHistogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistogramEqualization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistogramEqualization.Designer.cs">
+      <DependentUpon>frmHistogramEqualization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMorphology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMorphology.Designer.cs">
+      <DependentUpon>frmMorphology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Theshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Theshold.Designer.cs">
+      <DependentUpon>Theshold.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EmguConvert.resx">
+      <DependentUpon>EmguConvert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEdgeDetection.resx">
+      <DependentUpon>frmEdgeDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFullThreshold.resx">
+      <DependentUpon>frmFullThreshold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistogram.resx">
+      <DependentUpon>frmHistogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistogramEqualization.resx">
+      <DependentUpon>frmHistogramEqualization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMorphology.resx">
+      <DependentUpon>frmMorphology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Theshold.resx">
+      <DependentUpon>Theshold.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="cvextern.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="concrt140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cvextern.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcp140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ffmpeg330_64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vcruntime140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
